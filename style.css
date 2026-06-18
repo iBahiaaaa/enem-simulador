@@ -84,3 +84,17 @@ h1{
     cursor:pointer;
     font-size:16px;
 }
+
+#btnRecomecar{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#2563eb;
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+}

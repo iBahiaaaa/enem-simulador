@@ -62,6 +62,14 @@ function carregarQuestao() {
     });
 }
 
+function reiniciarSimulado() {
+    indiceAtual = 0;
+    acertos = 0;
+    respostaSelecionada = null;
+
+    carregarQuestao();
+}
+
 btnProxima.addEventListener("click", () => {
 
     if (respostaSelecionada === null) {
@@ -81,10 +89,24 @@ btnProxima.addEventListener("click", () => {
     if (indiceAtual >= questoes.length) {
 
         document.querySelector(".card").innerHTML = `
-            <h2>Simulado Finalizado!</h2>
-            <br>
-            <p>Você acertou ${acertos} de ${questoes.length} questões.</p>
-        `;
+    <h2>Simulado Finalizado!</h2>
+
+    <br>
+
+    <p>
+        Você acertou ${acertos} de ${questoes.length} questões.
+    </p>
+
+    <br>
+
+    <button id="btnRecomecar">
+        Refazer Simulado
+    </button>
+`;
+
+        document
+            .getElementById("btnRecomecar")
+            .addEventListener("click", reiniciarSimulado);
 
         return;
     }
