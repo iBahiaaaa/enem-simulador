@@ -1,27 +1,102 @@
 [
   {
-    "pergunta": "Qual é a capital do Brasil?",
-    "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Salvador"],
-    "correta": 1
-  },
-  {
-    "pergunta": "Em que ano o Brasil foi descoberto?",
-    "alternativas": ["1492", "1500", "1520", "1550"],
-    "correta": 1
-  },
-  {
-    "pergunta": "Qual é o maior estado do Brasil por área?",
-    "alternativas": ["Amazonas", "Mato Grosso", "São Paulo", "Bahia"],
-    "correta": 0
-  },
-  {
-    "pergunta": "Quantos estados tem o Brasil?",
-    "alternativas": ["24", "26", "27", "28"],
+    "pergunta": "A Revolução Industrial iniciada na Inglaterra no século XVIII provocou profundas transformações econômicas e sociais. Uma das principais consequências desse processo foi:",
+    "alternativas": [
+      "A redução da urbanização",
+      "O fortalecimento do trabalho artesanal como principal forma de produção",
+      "A consolidação do sistema fabril e do trabalho assalariado",
+      "O desaparecimento das desigualdades sociais"
+    ],
     "correta": 2
   },
   {
-    "pergunta": "Qual é a moeda oficial do Brasil?",
-    "alternativas": ["Peso", "Real", "Dólar", "Euro"],
+    "pergunta": "O desmatamento da Amazônia gera impactos ambientais que vão além da região Norte do Brasil. Um desses impactos é:",
+    "alternativas": [
+      "A redução da incidência solar na América do Sul",
+      "A alteração dos regimes de chuva em diferentes regiões do país",
+      "O aumento da camada de ozônio",
+      "A diminuição da biodiversidade marinha"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Durante o período da Guerra Fria, Estados Unidos e União Soviética disputaram influência política, econômica e militar no mundo. Esse conflito foi caracterizado principalmente por:",
+    "alternativas": [
+      "Confrontos militares diretos entre as duas potências",
+      "Uma disputa ideológica entre capitalismo e socialismo",
+      "A unificação econômica dos dois blocos",
+      "A criação de um governo mundial único"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "O efeito estufa é um fenômeno natural importante para a manutenção da vida na Terra. O problema ambiental atual ocorre devido:",
+    "alternativas": [
+      "À redução da radiação solar",
+      "Ao excesso de gases estufa emitidos pelas atividades humanas",
+      "À diminuição da quantidade de oxigênio na atmosfera",
+      "À extinção de espécies vegetais"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Uma aplicação financeira rende juros compostos de 10% ao ano. Se uma pessoa investir R$ 1.000,00 durante dois anos, o valor aproximado ao final do período será:",
+    "alternativas": [
+      "R$ 1.100,00",
+      "R$ 1.200,00",
+      "R$ 1.210,00",
+      "R$ 1.300,00"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "A Constituição Federal de 1988 ficou conhecida como 'Constituição Cidadã' porque:",
+    "alternativas": [
+      "Restringiu a participação popular nas decisões políticas",
+      "Ampliou direitos e garantias fundamentais da população",
+      "Estabeleceu o voto apenas para maiores de 21 anos",
+      "Eliminou a divisão dos três poderes"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "A expansão do uso de combustíveis fósseis está relacionada ao aumento:",
+    "alternativas": [
+      "Da emissão de dióxido de carbono na atmosfera",
+      "Da produção de oxigênio",
+      "Da formação da camada de ozônio",
+      "Da absorção de calor pelos oceanos"
+    ],
+    "correta": 0
+  },
+  {
+    "pergunta": "O processo de globalização intensificou as relações econômicas entre os países. Uma característica desse processo é:",
+    "alternativas": [
+      "O isolamento dos mercados nacionais",
+      "A redução da circulação de informações",
+      "A integração dos mercados e das comunicações",
+      "O fim das empresas multinacionais"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Em uma população, a vacinação em massa contribui para a saúde coletiva porque:",
+    "alternativas": [
+      "Elimina todas as doenças infecciosas",
+      "Garante imunidade permanente para todas as pessoas",
+      "Reduz a circulação dos agentes causadores de doenças",
+      "Substitui completamente outras medidas de prevenção"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Ao analisar um gráfico de crescimento populacional, observa-se que a taxa de crescimento diminuiu, mas a população total continua aumentando. Isso ocorre porque:",
+    "alternativas": [
+      "A natalidade é igual a zero",
+      "A população já acumulada continua crescendo, mesmo com taxas menores",
+      "A mortalidade supera a natalidade",
+      "O país deixou de registrar novos habitantes"
+    ],
     "correta": 1
   }
 ]
