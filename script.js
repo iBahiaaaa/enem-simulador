@@ -133,12 +133,12 @@ btnProxima.addEventListener("click", () => {
 
                 <br>
 
-                <p>
+                <p class="resposta-errada">
                     ❌ Sua resposta:
                     ${letras[respostaUsuario]}) ${questao.alternativas[respostaUsuario]}
                 </p>
 
-                <p>
+                <p class="resposta-correta">
                     ✅ Resposta correta:
                     ${letras[questao.correta]}) ${questao.alternativas[questao.correta]}
                 </p>

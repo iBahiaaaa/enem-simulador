@@ -98,3 +98,73 @@ h1{
     cursor:pointer;
     font-size:16px;
 }
+
+/* ====================
+   RESULTADO FINAL
+==================== */
+
+.erro-item{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.erro-item strong{
+    color:#111827;
+    font-size:18px;
+}
+
+.erro-item p{
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.erro-item p:nth-child(2){
+    font-weight:600;
+    color:#1f2937;
+}
+
+.resposta-errada{
+    color:#dc2626;
+    font-weight:600;
+}
+
+.resposta-correta{
+    color:#16a34a;
+    font-weight:600;
+}
+
+.erro-item hr{
+    margin-top:15px;
+    border:none;
+    border-top:1px solid #e5e7eb;
+}
+
+.resultado-titulo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.resultado-acertos{
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+}
+
+.resultado-percentual{
+    text-align:center;
+    color:#2563eb;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:25px;
+}
+
+.resultado-subtitulo{
+    margin-bottom:20px;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:10px;
+}
