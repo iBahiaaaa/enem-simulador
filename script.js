@@ -133,31 +133,25 @@ btnProxima.addEventListener("click", () => {
 });
 
 // ====================
-// CRONÔMETRO
+// TEMPO
 // ====================
 
-let tempo = 30 * 60;
+let tempo = 0;
 
 const timerEl = document.getElementById("timer");
 
 const cronometro = setInterval(() => {
 
-    tempo--;
+    tempo++;
 
-    const minutos = Math.floor(tempo / 60);
+    const horas = Math.floor(tempo / 3600);
+    const minutos = Math.floor((tempo % 3600) / 60);
     const segundos = tempo % 60;
 
     timerEl.textContent =
-        `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
-
-    if (tempo <= 0) {
-
-        clearInterval(cronometro);
-
-        alert("Tempo encerrado!");
-
-        location.reload();
-    }
+        `${String(horas).padStart(2, "0")}:` +
+        `${String(minutos).padStart(2, "0")}:` +
+        `${String(segundos).padStart(2, "0")}`;
 
 }, 1000);
 
