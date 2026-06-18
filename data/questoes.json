@@ -1,32 +1,27 @@
 [
-    {
-        "pergunta": "Quanto é 2 + 2?",
-        "alternativas": [
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correta": 2
-    },
-    {
-        "pergunta": "Qual a capital do Brasil?",
-        "alternativas": [
-            "São Paulo",
-            "Brasília",
-            "Rio de Janeiro",
-            "Salvador"
-        ],
-        "correta": 1
-    },
-    {
-        "pergunta": "Quanto é 10 x 5?",
-        "alternativas": [
-            "15",
-            "30",
-            "50",
-            "100"
-        ],
-        "correta": 2
-    }
+  {
+    "pergunta": "Qual é a capital do Brasil?",
+    "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Salvador"],
+    "correta": 1
+  },
+  {
+    "pergunta": "Em que ano o Brasil foi descoberto?",
+    "alternativas": ["1492", "1500", "1520", "1550"],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual é o maior estado do Brasil por área?",
+    "alternativas": ["Amazonas", "Mato Grosso", "São Paulo", "Bahia"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Quantos estados tem o Brasil?",
+    "alternativas": ["24", "26", "27", "28"],
+    "correta": 2
+  },
+  {
+    "pergunta": "Qual é a moeda oficial do Brasil?",
+    "alternativas": ["Peso", "Real", "Dólar", "Euro"],
+    "correta": 1
+  }
 ]
