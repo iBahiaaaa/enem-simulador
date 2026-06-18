@@ -10,30 +10,13 @@ const btnProxima = document.getElementById("btnProxima");
 
 async function carregarQuestoes() {
     try {
-        // Primeiro tenta carregar do localStorage
-        let questoesLocal = localStorage.getItem('questoes');
-        
-        if (questoesLocal) {
-            // Se existir no localStorage, usar
-            questoes = JSON.parse(questoesLocal);
-            console.log('✅ Perguntas carregadas do localStorage');
-        } else {
-            // Caso contrário, carregar do arquivo JSON
-            const resposta = await fetch("./data/questoes.json");
+        const resposta = await fetch("./data/questoes.json");
 
-            if (!resposta.ok) {
-                throw new Error("Erro ao carregar questões.");
-            }
-
-            questoes = await resposta.json();
-            console.log('✅ Perguntas carregadas do arquivo JSON');
+        if (!resposta.ok) {
+            throw new Error("Erro ao carregar questões.");
         }
 
-        if (questoes.length === 0) {
-            perguntaEl.textContent = "Nenhuma pergunta disponível. Vá em 'Gerenciar Perguntas' para adicionar.";
-            btnProxima.disabled = true;
-            return;
-        }
+        questoes = await resposta.json();
 
         carregarQuestao();
     } catch (erro) {
@@ -111,13 +94,7 @@ btnProxima.addEventListener("click", () => {
         <br>
 
         <p>
-            Você acertou <strong>${acertos}</strong> de <strong>${questoes.length}</strong> questões.
-        </p>
-
-        <br>
-
-        <p style="color: #666; font-size: 14px;">
-            Percentual: <strong>${((acertos / questoes.length) * 100).toFixed(1)}%</strong>
+            Você acertou ${acertos} de ${questoes.length} questões.
         </p>
 
         <br>
