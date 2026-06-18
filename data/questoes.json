@@ -1,0 +1,32 @@
+[
+    {
+        "pergunta": "Quanto é 2 + 2?",
+        "alternativas": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correta": 2
+    },
+    {
+        "pergunta": "Qual a capital do Brasil?",
+        "alternativas": [
+            "São Paulo",
+            "Brasília",
+            "Rio de Janeiro",
+            "Salvador"
+        ],
+        "correta": 1
+    },
+    {
+        "pergunta": "Quanto é 10 x 5?",
+        "alternativas": [
+            "15",
+            "30",
+            "50",
+            "100"
+        ],
+        "correta": 2
+    }
+]
