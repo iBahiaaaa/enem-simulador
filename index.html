@@ -10,26 +10,77 @@
 
     <div class="container">
 
-        <h1>Simulado ENEM</h1>
-
-        <div id="timer">
-            30:00
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="simulado">📝 Simulado</button>
+            <button class="tab-btn" data-tab="admin">⚙️ Gerenciar Perguntas</button>
         </div>
 
-        <div class="card">
+        <!-- ABA SIMULADO -->
+        <div id="simulado" class="tab-content active">
+            <h1>Simulado ENEM</h1>
 
-            <h2 id="pergunta"></h2>
+            <div id="timer">
+                30:00
+            </div>
 
-            <div id="alternativas"></div>
+            <div class="card">
 
-            <button id="btnProxima">
-                Próxima
-            </button>
+                <h2 id="pergunta"></h2>
 
+                <div id="alternativas"></div>
+
+                <button id="btnProxima">
+                    Próxima
+                </button>
+
+            </div>
+        </div>
+
+        <!-- ABA ADMIN -->
+        <div id="admin" class="tab-content">
+            <h1>Gerenciar Perguntas</h1>
+
+            <div class="card">
+                <h2>Adicionar Nova Pergunta</h2>
+                
+                <form id="formPergunta">
+                    <div class="form-group">
+                        <label for="inputPergunta">Pergunta:</label>
+                        <textarea id="inputPergunta" placeholder="Digite a pergunta..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alternativas:</label>
+                        <input type="text" id="alt1" placeholder="Alternativa A" required>
+                        <input type="text" id="alt2" placeholder="Alternativa B" required>
+                        <input type="text" id="alt3" placeholder="Alternativa C" required>
+                        <input type="text" id="alt4" placeholder="Alternativa D" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputCorreta">Resposta Correta:</label>
+                        <select id="inputCorreta" required>
+                            <option value="">Selecione...</option>
+                            <option value="0">Alternativa A</option>
+                            <option value="1">Alternativa B</option>
+                            <option value="2">Alternativa C</option>
+                            <option value="3">Alternativa D</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-add">➕ Adicionar Pergunta</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Perguntas Cadastradas</h2>
+                <div id="listaPerguntas"></div>
+            </div>
         </div>
 
     </div>
 
+    <script src="admin.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
