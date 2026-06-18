@@ -8,22 +8,65 @@
 body{
     background:#f4f4f4;
     min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    padding:20px 0;
 }
 
 .container{
     width:90%;
     max-width:800px;
+    margin:0 auto;
 }
 
 h1{
     text-align:center;
     margin-bottom:20px;
+    color:#333;
 }
 
+h2{
+    color:#333;
+    margin-bottom:15px;
+}
+
+/* ====== ABAS ====== */
+.nav-tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    border-bottom:2px solid #ddd;
+}
+
+.tab-btn{
+    padding:12px 20px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    color:#666;
+    border-bottom:3px solid transparent;
+    transition:.3s;
+}
+
+.tab-btn:hover{
+    color:#2563eb;
+}
+
+.tab-btn.active{
+    color:#2563eb;
+    border-bottom-color:#2563eb;
+}
+
+/* ====== TAB CONTENT ====== */
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* ====== TIMER ====== */
 #timer{
     background:#111;
     color:white;
@@ -32,32 +75,36 @@ h1{
     border-radius:10px;
     font-size:28px;
     margin-bottom:20px;
+    font-weight:bold;
 }
 
+/* ====== CARD ====== */
 .card{
     background:white;
     padding:25px;
     border-radius:10px;
     box-shadow:0 0 10px rgba(0,0,0,.1);
+    margin-bottom:20px;
 }
 
 #pergunta{
     margin-bottom:20px;
+    color:#333;
 }
 
+/* ====== ALTERNATIVAS ====== */
 .alternativa{
     display:block;
     width:100%;
     text-align:left;
-
     padding:15px;
     margin-bottom:10px;
-
     border:1px solid #ccc;
     border-radius:8px;
-
     cursor:pointer;
     transition:.2s;
+    background:white;
+    font-size:16px;
 }
 
 .alternativa:hover{
@@ -69,32 +116,174 @@ h1{
     border-color:#2563eb;
 }
 
-#btnProxima{
+/* ====== BOTÕES ====== */
+#btnProxima, #btnRecomecar, .btn-add{
     margin-top:20px;
-
     width:100%;
     padding:15px;
-
     border:none;
     border-radius:8px;
-
     background:#2563eb;
     color:white;
-
     cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+#btnProxima:hover, #btnRecomecar:hover, .btn-add:hover{
+    background:#1d4ed8;
+}
+
+#btnProxima:active, #btnRecomecar:active, .btn-add:active{
+    transform:scale(0.98);
+}
+
+/* ====== FORMULÁRIO ====== */
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    font-family:Arial, sans-serif;
+    resize:vertical;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+.form-group textarea{
+    min-height:80px;
+}
+
+/* ====== LISTA DE PERGUNTAS ====== */
+.pergunta-item{
+    background:#f9f9f9;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.pergunta-content{
+    flex:1;
+}
+
+.pergunta-content h3{
+    color:#333;
+    margin-bottom:10px;
     font-size:16px;
 }
 
-#btnRecomecar{
-    width:100%;
-    padding:15px;
+.alternativas-list{
+    margin-left:20px;
+}
 
+.alt-item{
+    padding:8px;
+    margin:5px 0;
+    background:white;
+    border:1px solid #eee;
+    border-radius:5px;
+    font-size:14px;
+    color:#666;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.alt-item.correta{
+    background:#e8f5e9;
+    border-color:#4caf50;
+    color:#2e7d32;
+}
+
+.badge{
+    background:#4caf50;
+    color:white;
+    padding:3px 8px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.pergunta-actions{
+    display:flex;
+    gap:8px;
+    flex-direction:column;
+}
+
+.btn-editar, .btn-deletar{
+    padding:8px 12px;
     border:none;
-    border-radius:8px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.2s;
+    white-space:nowrap;
+}
 
+.btn-editar{
     background:#2563eb;
     color:white;
+}
 
-    cursor:pointer;
-    font-size:16px;
+.btn-editar:hover{
+    background:#1d4ed8;
+}
+
+.btn-deletar{
+    background:#ef4444;
+    color:white;
+}
+
+.btn-deletar:hover{
+    background:#dc2626;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 600px) {
+    .container{
+        width:100%;
+        padding:0 15px;
+    }
+
+    .pergunta-item{
+        flex-direction:column;
+    }
+
+    .pergunta-actions{
+        flex-direction:row;
+    }
+
+    .nav-tabs{
+        flex-direction:column;
+    }
+
+    .tab-btn{
+        text-align:left;
+    }
 }
