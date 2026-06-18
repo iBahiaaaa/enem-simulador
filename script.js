@@ -21,10 +21,15 @@ async function carregarQuestoes() {
 
         questoes = await resposta.json();
 
+        console.log("Questões:", questoes);
+        console.log("Quantidade:", questoes.length);
+
         questoesEmbaralhadas =
             [...questoes]
                 .sort(() => Math.random() - 0.5)
                 .slice(0, 20);
+
+        console.log("Embaralhadas:", questoesEmbaralhadas);
 
         carregarQuestao();
 
@@ -97,6 +102,8 @@ btnProxima.addEventListener("click", () => {
     indiceAtual++;
 
     if (indiceAtual >= questoesEmbaralhadas.length) {
+
+        clearInterval(cronometro);
 
         document.querySelector(".card").innerHTML = `
         <h2>Simulado Finalizado!</h2>
