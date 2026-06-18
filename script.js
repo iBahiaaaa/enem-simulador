@@ -143,5 +143,11 @@ const cronometro = setInterval(() => {
 
 }, 1000);
 
+const resposta = await fetch('./data/version.json');
+const dados = await resposta.json();
+
+document.getElementById('version').textContent =
+    `Commit: ${dados.commit}`;
+
 // Inicia carregamento
 carregarQuestoes();
