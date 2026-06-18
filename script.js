@@ -1,5 +1,8 @@
+// inicio do arquivo
+
 let questoes = [];
 let questoesEmbaralhadas = [];
+let respostasUsuario = [];
 
 let indiceAtual = 0;
 let respostaSelecionada = null;
@@ -92,6 +95,8 @@ btnProxima.addEventListener("click", () => {
         return;
     }
 
+    respostasUsuario[indiceAtual] = respostaSelecionada;
+
     if (
         respostaSelecionada ===
         questoesEmbaralhadas[indiceAtual].correta
@@ -105,21 +110,67 @@ btnProxima.addEventListener("click", () => {
 
         clearInterval(cronometro);
 
+        let relatorioErros = "";
+
+        const letras = ["A", "B", "C", "D", "E"];
+
+        questoesEmbaralhadas.forEach((questao, indice) => {
+
+            const respostaUsuario = respostasUsuario[indice];
+
+            if (respostaUsuario !== questao.correta) {
+
+                relatorioErros += `
+            <div class="erro-item">
+
+                <p>
+                    <strong>Questão ${indice + 1}</strong>
+                </p>
+
+                <p>
+                    ${questao.pergunta}
+                </p>
+
+                <br>
+
+                <p>
+                    ❌ Sua resposta:
+                    ${letras[respostaUsuario]}) ${questao.alternativas[respostaUsuario]}
+                </p>
+
+                <p>
+                    ✅ Resposta correta:
+                    ${letras[questao.correta]}) ${questao.alternativas[questao.correta]}
+                </p>
+
+                <hr>
+
+            </div>
+        `;
+            }
+        });
+
         document.querySelector(".card").innerHTML = `
-        <h2>Simulado Finalizado!</h2>
+            <h2>Simulado Finalizado!</h2>
 
-        <br>
+            <br>
 
-        <p>
-            Você acertou ${acertos} de ${questoesEmbaralhadas.length} questões.
-        </p>
+            <p>
+                Você acertou ${acertos} de ${questoesEmbaralhadas.length} questões.
+            </p>
 
-        <br>
+            <br>
 
-        <button id="btnRecomecar">
-            Refazer Simulado
-        </button>
-    `;
+            <h3>Questões Erradas</h3>
+
+            ${relatorioErros || "<p>Parabéns! Você não errou nenhuma questão.</p>"}
+
+            <br>
+
+            <button id="btnRecomecar">
+                Refazer Simulado
+            </button>
+        `;
 
         document
             .getElementById("btnRecomecar")
@@ -157,3 +208,5 @@ const cronometro = setInterval(() => {
 
 // Inicia carregamento
 carregarQuestoes();
+
+// fim do arquivo
