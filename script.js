@@ -151,21 +151,23 @@ btnProxima.addEventListener("click", () => {
         });
 
         document.querySelector(".card").innerHTML = `
-            <h2>Simulado Finalizado!</h2>
+            <h2 class="resultado-titulo">
+                Simulado Finalizado!
+            </h2>
 
-            <br>
-
-            <p>
+            <p class="resultado-acertos">
                 Você acertou ${acertos} de ${questoesEmbaralhadas.length} questões.
             </p>
 
-            <br>
+            <p class="resultado-percentual">
+                ${Math.round((acertos / questoesEmbaralhadas.length) * 100)}%
+            </p>
 
-            <h3>Questões Erradas</h3>
+            <h3 class="resultado-subtitulo">
+                Questões Erradas
+            </h3>
 
             ${relatorioErros || "<p>Parabéns! Você não errou nenhuma questão.</p>"}
-
-            <br>
 
             <button id="btnRecomecar">
                 Refazer Simulado
