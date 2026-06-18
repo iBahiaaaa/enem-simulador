@@ -98,5 +98,105 @@
       "O país deixou de registrar novos habitantes"
     ],
     "correta": 1
+  },
+  {
+    "pergunta": "A área A de um quadrado é dada por A = l², onde l representa o lado. Se o lado for duplicado, por qual fator a área será multiplicada?",
+    "alternativas": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "A energia cinética de um corpo é dada por Ec = k·v². Se a velocidade for triplicada, a energia cinética será multiplicada por:",
+    "alternativas": [
+      "3",
+      "6",
+      "9",
+      "27"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "O volume de um cubo é dado por V = a³. Se a aresta aumentar 20%, qual será o fator de multiplicação do volume?",
+    "alternativas": [
+      "1,20",
+      "1,44",
+      "1,728",
+      "2,00"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "A intensidade luminosa recebida por um sensor é inversamente proporcional ao quadrado da distância: I = k/d². Se a distância for dobrada, a intensidade recebida passa a ser:",
+    "alternativas": [
+      "A metade",
+      "Um quarto",
+      "O dobro",
+      "Quatro vezes maior"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "A quantidade Q produzida por uma fábrica é proporcional ao número de máquinas M e ao tempo de funcionamento t. Se o número de máquinas dobrar e o tempo reduzir pela metade, a produção:",
+    "alternativas": [
+      "Dobra",
+      "Cai pela metade",
+      "Permanece igual",
+      "Quadruplica"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Uma população de bactérias dobra a cada hora. Se inicialmente existem 500 bactérias, após 4 horas haverá:",
+    "alternativas": [
+      "2.000",
+      "4.000",
+      "8.000",
+      "16.000"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "A força gravitacional entre dois corpos é dada por F = k/(d²), onde d é a distância entre eles. Se a distância for reduzida à metade, a força gravitacional será:",
+    "alternativas": [
+      "2 vezes maior",
+      "4 vezes maior",
+      "6 vezes maior",
+      "8 vezes maior"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "A área de um círculo é dada por A = π·r². Se o raio aumentar 50%, a área será multiplicada por:",
+    "alternativas": [
+      "1,5",
+      "2,0",
+      "2,25",
+      "3,0"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Uma grandeza Y é diretamente proporcional ao cubo de X. Se X aumentar 10%, aproximadamente quanto Y aumentará?",
+    "alternativas": [
+      "10%",
+      "21%",
+      "33,1%",
+      "50%"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "A resistência elétrica R de um fio é diretamente proporcional ao seu comprimento L. Se o comprimento aumentar 80%, a resistência será multiplicada por:",
+    "alternativas": [
+      "1,4",
+      "1,6",
+      "1,8",
+      "2,8"
+    ],
+    "correta": 2
   }
 ]

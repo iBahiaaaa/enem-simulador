@@ -7,6 +7,7 @@ let acertos = 0;
 const perguntaEl = document.getElementById("pergunta");
 const alternativasEl = document.getElementById("alternativas");
 const btnProxima = document.getElementById("btnProxima");
+const questoesEmbaralhadas = [...questoes].sort(() => Math.random() - 0.5);
 
 async function carregarQuestoes() {
     try {
@@ -29,8 +30,8 @@ async function carregarQuestoes() {
 
 function carregarQuestao() {
 
-    const questao = questoes[indiceAtual];
-
+    const questao = questoesEmbaralhadas[indiceAtual];
+    
     perguntaEl.textContent =
         `${indiceAtual + 1}. ${questao.pergunta}`;
 
