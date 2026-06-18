@@ -168,3 +168,17 @@ h1{
     border-bottom:2px solid #e5e7eb;
     padding-bottom:10px;
 }
+
+#btnMostrarRespostas{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#16a34a;
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+}

@@ -167,7 +167,19 @@ btnProxima.addEventListener("click", () => {
                 Questões Erradas
             </h3>
 
-            ${relatorioErros || "<p>Parabéns! Você não errou nenhuma questão.</p>"}
+            <div id="relatorioRespostas" style="display:none;">
+                <h3 class="resultado-subtitulo">
+                    Questões Erradas
+                </h3>
+
+                ${relatorioErros || "<p>Parabéns! Você não errou nenhuma questão.</p>"}
+            </div>
+
+            <button id="btnMostrarRespostas">
+                Ver respostas
+            </button>
+
+            <br><br>
 
             <button id="btnRecomecar">
                 Refazer Simulado
@@ -178,6 +190,28 @@ btnProxima.addEventListener("click", () => {
             .getElementById("btnRecomecar")
             .addEventListener("click", () => {
                 location.reload();
+            });
+
+        document
+            .getElementById("btnMostrarRespostas")
+            .addEventListener("click", () => {
+
+                const relatorio =
+                    document.getElementById("relatorioRespostas");
+
+                const botao =
+                    document.getElementById("btnMostrarRespostas");
+
+                if (relatorio.style.display === "none") {
+
+                    relatorio.style.display = "block";
+                    botao.textContent = "Ocultar respostas";
+
+                } else {
+
+                    relatorio.style.display = "none";
+                    botao.textContent = "Ver respostas";
+                }
             });
 
         return;
