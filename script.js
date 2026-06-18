@@ -1,4 +1,5 @@
 let questoes = [];
+let questoesEmbaralhadas = [];
 
 let indiceAtual = 0;
 let respostaSelecionada = null;
@@ -7,10 +8,11 @@ let acertos = 0;
 const perguntaEl = document.getElementById("pergunta");
 const alternativasEl = document.getElementById("alternativas");
 const btnProxima = document.getElementById("btnProxima");
-const questoesEmbaralhadas = [...questoes].sort(() => Math.random() - 0.5);
 
 async function carregarQuestoes() {
+
     try {
+
         const resposta = await fetch("./data/questoes.json");
 
         if (!resposta.ok) {
@@ -19,8 +21,15 @@ async function carregarQuestoes() {
 
         questoes = await resposta.json();
 
+        questoesEmbaralhadas =
+            [...questoes]
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 20);
+
         carregarQuestao();
+
     } catch (erro) {
+
         perguntaEl.textContent =
             "Erro ao carregar as questões.";
 
@@ -31,7 +40,7 @@ async function carregarQuestoes() {
 function carregarQuestao() {
 
     const questao = questoesEmbaralhadas[indiceAtual];
-    
+
     perguntaEl.textContent =
         `${indiceAtual + 1}. ${questao.pergunta}`;
 
@@ -80,14 +89,14 @@ btnProxima.addEventListener("click", () => {
 
     if (
         respostaSelecionada ===
-        questoes[indiceAtual].correta
+        questoesEmbaralhadas[indiceAtual].correta
     ) {
         acertos++;
     }
 
     indiceAtual++;
 
-    if (indiceAtual >= questoes.length) {
+    if (indiceAtual >= questoesEmbaralhadas.length) {
 
         document.querySelector(".card").innerHTML = `
         <h2>Simulado Finalizado!</h2>
@@ -95,7 +104,7 @@ btnProxima.addEventListener("click", () => {
         <br>
 
         <p>
-            Você acertou ${acertos} de ${questoes.length} questões.
+            Você acertou ${acertos} de ${questoesEmbaralhadas.length} questões.
         </p>
 
         <br>
@@ -117,25 +126,31 @@ btnProxima.addEventListener("click", () => {
 });
 
 // ====================
-// TEMPO
+// CRONÔMETRO
 // ====================
 
-let tempo = 0;
+let tempo = 30 * 60;
 
 const timerEl = document.getElementById("timer");
 
-setInterval(() => {
+const cronometro = setInterval(() => {
 
-    tempo++;
+    tempo--;
 
-    const horas = Math.floor(tempo / 3600);
-    const minutos = Math.floor((tempo % 3600) / 60);
+    const minutos = Math.floor(tempo / 60);
     const segundos = tempo % 60;
 
     timerEl.textContent =
-        `${String(horas).padStart(2, "0")}:` +
-        `${String(minutos).padStart(2, "0")}:` +
-        `${String(segundos).padStart(2, "0")}`;
+        `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+
+    if (tempo <= 0) {
+
+        clearInterval(cronometro);
+
+        alert("Tempo encerrado!");
+
+        location.reload();
+    }
 
 }, 1000);
 
