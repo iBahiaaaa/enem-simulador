@@ -89,28 +89,29 @@ btnProxima.addEventListener("click", () => {
     if (indiceAtual >= questoes.length) {
 
         document.querySelector(".card").innerHTML = `
-    <h2>Simulado Finalizado!</h2>
+        <h2>Simulado Finalizado!</h2>
 
-    <br>
+        <br>
 
-    <p>
-        Você acertou ${acertos} de ${questoes.length} questões.
-    </p>
+        <p>
+            Você acertou ${acertos} de ${questoes.length} questões.
+        </p>
 
-    <br>
+        <br>
 
-    <button id="btnRecomecar">
-        Refazer Simulado
-    </button>
-`;
+        <button id="btnRecomecar">
+            Refazer Simulado
+        </button>
+    `;
 
         document
             .getElementById("btnRecomecar")
-            .addEventListener("click", reiniciarSimulado);
+            .addEventListener("click", () => {
+                location.reload();
+            });
 
         return;
     }
-
     carregarQuestao();
 });
 
