@@ -14,9 +14,19 @@ const btnProxima = document.getElementById("btnProxima");
 
 async function carregarQuestoes() {
 
+    const materia =
+        localStorage.getItem("materiaSelecionada");
+
+    if (!materia) {
+        window.location.href = "index.html";
+        return;
+    }
+
     try {
 
-        const resposta = await fetch("./data/questoes.json");
+        const resposta = await fetch(
+            `./data/${materia}.json`
+        );
 
         if (!resposta.ok) {
             throw new Error("Erro ao carregar questões.");
@@ -24,15 +34,25 @@ async function carregarQuestoes() {
 
         questoes = await resposta.json();
 
-        console.log("Questões:", questoes);
-        console.log("Quantidade:", questoes.length);
+        if (questoes.length === 0) {
+
+            document.querySelector(".card").innerHTML = `
+                <h2>Sem questões cadastradas</h2>
+
+                <br>
+
+                <p>
+                    Ainda não existem questões para esta matéria.
+                </p>
+            `;
+
+            return;
+        }
 
         questoesEmbaralhadas =
             [...questoes]
                 .sort(() => Math.random() - 0.5)
                 .slice(0, 20);
-
-        console.log("Embaralhadas:", questoesEmbaralhadas);
 
         carregarQuestao();
 
@@ -224,10 +244,15 @@ btnProxima.addEventListener("click", () => {
 // ====================
 
 let tempo = 0;
+let pausado = false;
 
 const timerEl = document.getElementById("timer");
 
 const cronometro = setInterval(() => {
+
+    if (pausado) {
+        return;
+    }
 
     tempo++;
 
@@ -242,6 +267,20 @@ const cronometro = setInterval(() => {
 
 }, 1000);
 
+document
+    .getElementById("btnPause")
+    .addEventListener("click", () => {
+
+        pausado = !pausado;
+
+        const btn =
+            document.getElementById("btnPause");
+
+        btn.textContent =
+            pausado
+                ? "▶ Continuar"
+                : "⏸ Pausar";
+    });
 // Inicia carregamento
 carregarQuestoes();
 

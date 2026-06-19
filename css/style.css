@@ -182,3 +182,99 @@ h1{
     cursor:pointer;
     font-size:16px;
 }
+
+#timer-controls{
+    margin-bottom:20px;
+}
+
+#btnPause{
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#f59e0b;
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.descricao{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.materias{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:15px;
+}
+
+.materia{
+    border:none;
+    border-radius:10px;
+
+    padding:18px;
+
+    background:white;
+    border:1px solid #ddd;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.2s;
+}
+
+.materia:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-2px);
+}
+
+.destaque{
+    background:#2563eb;
+    color:white;
+    border:none;
+}
+
+.destaque:hover{
+    background:#1d4ed8;
+}

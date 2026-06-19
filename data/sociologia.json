@@ -1,0 +1,12 @@
+[
+    {
+        "pergunta": "Teste sociologia",
+        "alternativas": [
+            "A diminuição da salinidade dos mares",
+            "O aumento da atividade vulcânica submarina",
+            "O derretimento de geleiras continentais e expansão térmica da água",
+            "A redução da incidência de radiação solar"
+        ],
+        "correta": 2
+    }
+]
